@@ -3,13 +3,24 @@
 }
 
 body {
+  background-color: #dfdfdf;
   font-family: sans-serif;
   margin: 3rem;
-  background-color: #dfdfdf;
 }
 
-h1, h2 {
+input, body, html {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
   color: #333333;
+  margin-top: 0;
+}
+
+.small {
+  color: rgba(0,0,0,0.5);
+  font-style: italic;
+  font-size: 13px;
 }
 
 .btn {
@@ -43,7 +54,7 @@ h1, h2 {
   border-radius: 4px;
   margin: 0 0 2rem;
   padding: 1rem;
-  width: 20rem;
+  width: 100%;
 }
 
 .actions {
@@ -52,15 +63,15 @@ h1, h2 {
 
 .modal {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
   background-color: white;
-  padding: 1rem;
+  left: calc(50% - 45%);
+  border-radius: 6px;
   text-align: center;
-  width: 30rem;
-  z-index: 10;
   position: fixed;
+  padding: 1rem;
+  width: 90%;
+  z-index: 10;
   top: 20vh;
-  left: calc(50% - 15rem);
 }
 
 .backdrop {
@@ -71,4 +82,22 @@ h1, h2 {
   height: 100vh;
   top: 0;
   left: 0;
+}
+
+.form {
+  margin: 2rem auto;
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  display: block;
+  padding: 10px;
+  margin: 1em auto 0;
+  width: 100%;
+}
+
+label {
+  margin-right: 1rem;
+  font-size: 18px;
 }
