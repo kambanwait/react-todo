@@ -31,10 +31,8 @@ function TodoForm (props) {
   }
 
   return (
-    <form
-      className='form'
-      onSubmit={handleFormSubmit}
-    >
+    <form className='form' onSubmit={handleFormSubmit} >
+
       <label htmlFor='newTodoInput'>Add a new Todo:</label>
 
       <input
@@ -42,7 +40,7 @@ function TodoForm (props) {
         placeholder='e.g: Clean up this code!'
         id='newTodoInput'
         value={value}
-        onChange={handleOnInputchange}
+        onChange={handleOnInputChange}
       />
 
       <p className='small'>Tip: Press Enter to add your new todo</p>
