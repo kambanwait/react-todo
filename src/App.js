@@ -15,7 +15,18 @@ function App() {
     return localData ? JSON.parse(localData) : []
   })
 
-  function AddTodo (todoTitle) {
+  /**
+   * runs 1st time when component mounts
+   * runs after the previous, each time changes/updates are made to todos (see useState above)
+   */
+  useEffect(() => {
+    // check for any todos in an array and if any exist we store it in localstorage
+    // this listens to any changes on the todos array state
+    if (todos.length) localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
+  // use setTodos method from state to array ...spread in existing and new todo
+  function addTodo (todoTitle) {
     setTodos([...todos, todoTitle])
   }
 
