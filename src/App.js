@@ -30,6 +30,7 @@ function App() {
     setTodos([...todos, todoTitle])
   }
 
+  // splice to remove 1st instance of toto. Splice ensures we don't delete all instances of duplicate todos
   function removeTodo (todoTitle) {
     todos.splice( todos.indexOf(todoTitle), 1)
     setTodos([...todos])
