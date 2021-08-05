@@ -3,7 +3,12 @@ import { useState } from 'react'
 import Modal from './Modal';
 import Backdrop from './Backdrop';
 
-function Todo (props) {
+/**
+ * TodoCard that displays passed in title and handles modal to confirm/cancel deletion of To do
+ * @param {String} title the To do title passed in from the parent
+ * @param {Function} onDelete the function to handle the deletion of the To do
+ */
+function Todo ({ title, onDelete }) {
 
   const [ isModalOpen, setModalIsOpen] = useState(false)
 
@@ -16,14 +21,14 @@ function Todo (props) {
   }
 
   function confirmTodoDelete () {
-    props.onDelete(props.title)
+    onDelete(title)
     closeModal()
   }
 
   return (
     <div className='card'>
 
-      <h3>{props.title}</h3>
+      <h3>{title}</h3>
 
       <div className='actions'>
         <button onClick={deleteHandler} className='btn'>Delete</button>
@@ -32,7 +37,7 @@ function Todo (props) {
       {/* Modal */}
       { isModalOpen &&
         <Modal
-          todoTitle={props.title}
+          todoTitle={title}
           onCancel={closeModal}
           onConfirmDeleteClick={confirmTodoDelete}
         />
