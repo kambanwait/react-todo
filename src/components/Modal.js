@@ -1,11 +1,12 @@
 /**
- *
  * @param todoTitle - Props.String
  * @param onCancel - Props.function
  * @param onConfirmDeleteClick - Props.function
  * @returns {Modal component}
- */function Modal ({ todoTitle, onCancel, onConfirmDeleteClick }) {
+*/
 
+// destructure props passed in to save writing `props.xyz` multiple times
+function Modal ({ todoTitle, onCancel, onConfirmDeleteClick }) {
   return (
       <div className='modal'>
 
