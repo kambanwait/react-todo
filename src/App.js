@@ -5,7 +5,15 @@ import TodoForm from './components/TodoForm'
 
 function App() {
 
-  const [todos, setTodos] = useState([])
+  /**
+   * react hook useState to set the todos to see what's stored in LocalStorage, or use blank array if no
+   * localstorage data is found
+   */
+  const [todos, setTodos] = useState(() => {
+    const localData = localStorage.getItem('todos')
+    // returns parsed localdata or an empty array if no local data is present
+    return localData ? JSON.parse(localData) : []
+  })
 
   function AddTodo (todoTitle) {
     setTodos([...todos, todoTitle])
