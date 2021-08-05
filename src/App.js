@@ -42,7 +42,7 @@ function App() {
 
       <TodoForm saveTodo={addTodo} />
 
-      {todos.map((todo, index) => (
+      {todos && todos.map((todo, index) => (
         <Todo
           key={index.toString()}
           title={todo}
