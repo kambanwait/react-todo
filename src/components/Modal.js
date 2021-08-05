@@ -1,4 +1,5 @@
 /**
+ * Modal pop up to confirm if user wants to delete the Todo
  * @param todoTitle - Props.String
  * @param onCancel - Props.function
  * @param onConfirmDeleteClick - Props.function
