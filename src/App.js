@@ -40,7 +40,7 @@ function App() {
     <div>
       <h1>My Todos</h1>
 
-      <TodoForm saveTodo={AddTodo} />
+      <TodoForm saveTodo={addTodo} />
 
       {todos.map((todo, index) => (
         <Todo
