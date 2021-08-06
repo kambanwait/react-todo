@@ -26,7 +26,7 @@ function Todo ({ title, onDelete }) {
   }
 
   return (
-    <div className='card'>
+    <li className='list__item'>
 
       <h3>{title}</h3>
 
@@ -46,7 +46,7 @@ function Todo ({ title, onDelete }) {
       {/* Backdrop */}
       { isModalOpen && <Backdrop onClick={closeModal} /> }
 
-    </div>
+    </li>
   )
 }
 
