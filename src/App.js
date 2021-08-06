@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Todo from './components/Todo'
 import TodoForm from './components/TodoForm'
 
-function App() {
+function App () {
 
   /**
    * react hook useState to set the todos to see what's stored in LocalStorage, or use blank array if no
@@ -42,14 +42,20 @@ function App() {
 
       <TodoForm saveTodo={addTodo} />
 
-        <ul className='list'>
-        {todos && todos.map((todo, index) => (
-          <Todo
-            key={index.toString()}
-            title={todo}
-            onDelete={removeTodo}
-          />
-        ))}
+      <ul className='list'>
+        {todos.length ?
+          todos.map((todo, index) => (
+            <Todo
+              key={index.toString()}
+              title={todo}
+              onDelete={removeTodo}
+            />
+          ))
+        :
+          <li className='list__item list__item--empty'>
+            <p className='copy copy--center copy--large copy--light'>Your To Do list needs some <em>to do's</em></p>
+          </li>
+        }
       </ul>
     </>
   );

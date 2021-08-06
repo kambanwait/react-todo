@@ -57,6 +57,11 @@ label {
   width: 100%;
 }
 
+  .list__item--empty {
+    box-shadow: none;
+    background: none;
+  }
+
 .list__actions {
   text-align: right;
 }
