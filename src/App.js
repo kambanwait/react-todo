@@ -37,19 +37,21 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <h1>My Todos</h1>
 
       <TodoForm saveTodo={addTodo} />
 
-      {todos && todos.map((todo, index) => (
-        <Todo
-          key={index.toString()}
-          title={todo}
-          onDelete={removeTodo}
-        />
-      ))}
-    </div>
+        <ul className='list'>
+        {todos && todos.map((todo, index) => (
+          <Todo
+            key={index.toString()}
+            title={todo}
+            onDelete={removeTodo}
+          />
+        ))}
+      </ul>
+    </>
   );
 }
 
