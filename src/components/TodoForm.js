@@ -6,8 +6,7 @@ import enterIcon from '../icons/enter.svg'
  * @param {Object} props contains function from praent app.js to call when want to save a to do (props.saveTodo).
  * pass in the value from the input field
  * @returns {JSX.Element}
- * @constructor
- */
+*/
 function TodoForm (props) {
 
   const [value, setValue] = useState('')
