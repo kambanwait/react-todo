@@ -36,10 +36,34 @@ label {
   margin: 0 auto;
 }
 
+.align-right {
+  text-align: right;
+}
+
+.copy {}
+
+.copy__inline-icon {
+  display: inline-block;
+  margin: 0 0 -3px 3px;
+  height: 15px;
+  width: 15px;
+}
+
 .copy--small {
-  color: rgba(0,0,0,0.5);
   font-style: italic;
   font-size: 13px;
+}
+
+.copy--center {
+  text-align: center;
+}
+
+.copy--large {
+  font-size: 18px;
+}
+
+.copy--light {
+  color: rgba(0,0,0,0.5);
 }
 
 .list {
