@@ -8,7 +8,7 @@ function App () {
   /**
    * react hook useState to set the todos to see what's stored in LocalStorage, or use blank array if no
    * localstorage data is found
-   */
+ */
   const [todos, setTodos] = useState(() => {
     const localData = localStorage.getItem('todos')
     // returns parsed localdata or an empty array if no local data is present
@@ -18,7 +18,7 @@ function App () {
   /**
    * runs 1st time when component mounts
    * runs after the previous, each time changes/updates are made to todos (see useState above)
-   */
+  */
   useEffect(() => {
     // check for any todos in an array and if any exist we store it in localstorage
     // this listens to any changes on the todos array state
