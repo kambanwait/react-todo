@@ -38,7 +38,7 @@ function App () {
 
   return (
     <>
-      <h1>My Todos</h1>
+      <h1>My To-dos</h1>
 
       <TodoForm saveTodo={addTodo} />
 
@@ -53,7 +53,7 @@ function App () {
           ))
         :
           <li className='list__item list__item--empty'>
-            <p className='copy copy--center copy--large copy--light'>Your To Do list needs some <em>to do's</em></p>
+            <p className='copy copy--center copy--large copy--light'>Your to-do list needs some <em>to-dos</em></p>
           </li>
         }
       </ul>

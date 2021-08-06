@@ -33,7 +33,7 @@ function TodoForm (props) {
   return (
     <form className='form' onSubmit={handleFormSubmit} >
 
-      <label htmlFor='newTodoInput'>Add a new Todo:</label>
+      <label htmlFor='newTodoInput'>Add a new To-do:</label>
 
       <input
         type='text'
@@ -43,7 +43,7 @@ function TodoForm (props) {
         onChange={handleOnInputChange}
       />
 
-      <p className='copy copy--small copy--light align-right'>Tip: Press Enter to add your new To do <img src={enterIcon} className='copy__inline-icon' alt='Enter Icon' /></p>
+      <p className='copy copy--small copy--light align-right'>Tip: Press Enter to add your new to-do <img src={enterIcon} className='copy__inline-icon' alt='Enter Icon' /></p>
     </form>
   )
 }
