@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import enterIcon from '../icons/enter.svg'
 
 /**
  * To do form holds and handles the input form at the top of the app where users can add a to do
@@ -43,7 +44,7 @@ function TodoForm (props) {
         onChange={handleOnInputChange}
       />
 
-      <p className='copy--small'>Tip: Press Enter to add your new todo</p>
+      <p className='copy copy--small copy--light align-right'>Tip: Press Enter to add your new To do <img src={enterIcon} className='copy__inline-icon' alt='Enter Icon' /></p>
     </form>
   )
 }
