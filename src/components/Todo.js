@@ -28,9 +28,9 @@ function Todo ({ title, onDelete }) {
   return (
     <li className='list__item'>
 
-      <h3>{title}</h3>
+      <h3 className='list__header'>{title}</h3>
 
-      <div className='actions'>
+      <div className='list__actions'>
         <button onClick={deleteHandler} className='btn'>Delete</button>
       </div>
 
