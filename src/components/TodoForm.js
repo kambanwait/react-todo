@@ -43,7 +43,7 @@ function TodoForm (props) {
         onChange={handleOnInputChange}
       />
 
-      <p className='small'>Tip: Press Enter to add your new todo</p>
+      <p className='copy--small'>Tip: Press Enter to add your new todo</p>
     </form>
   )
 }
